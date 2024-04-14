@@ -4,7 +4,6 @@ import { usernameActions } from "../store/username-slice";
 function Dropdown() {
   const users = useSelector((state) => state.users.users);
   const dispatch = useDispatch();
-  const selectedUsers = useSelector((state) => state.users.selectedUsers);
 
   const handleSelectUser = (e) => {
     const selectedUserId = Number(e.target.value);

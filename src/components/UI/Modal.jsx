@@ -22,7 +22,7 @@ function Modal({ user }) {
   };
   return (
     <div className="modal">
-      <p>Do you want to delete user?</p>
+      <p>Do you want to delete this user?</p>
       <div className="modal--buttons">
         <button onClick={() => deleteUser(id)}>Yes</button>
         <button onClick={() => dispatch(uiActions.setShowModal(null))}>

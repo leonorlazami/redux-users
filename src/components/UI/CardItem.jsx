@@ -1,3 +1,4 @@
+/* eslint-disable no-unsafe-optional-chaining */
 /* eslint-disable react/prop-types */
 import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
@@ -6,15 +7,13 @@ import { AiOutlineDelete } from "react-icons/ai";
 import Modal from "./Modal";
 
 function CardItem({ user }) {
-  const { name: userName, email, phone, website } = user;
-  // eslint-disable-next-line no-unsafe-optional-chaining
-  const { street, city } = user?.address;
-  // eslint-disable-next-line no-unsafe-optional-chaining
-  const { name: companyName } = user?.company;
-  const { id } = user;
-
   const dispatch = useDispatch();
   const showModal = useSelector((state) => state.ui.showModal);
+
+  const { name: userName, email, phone, website } = user;
+  const { street, city } = user?.address;
+  const { name: companyName } = user?.company;
+  const { id } = user;
 
   const toggleModal = (userID) => {
     if (showModal === userID) {

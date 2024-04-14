@@ -1,17 +1,28 @@
+:root {
+  --background-color: #edede9;
+  --primary-color: #285f47;
+  --border-color: rgb(20, 21, 20);
+  --box-shadow-color: rgba(0, 0, 0, 0.75);
+  --modal-background-color: #6a6a68;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #edede9;
+  background-color: var(--background-color);
   font-family: "Lato", sans-serif;
 }
+
 .app {
   padding: 1.5rem 3rem;
 }
+
 .header {
   text-align: center;
   font-weight: 400;
 }
+
 .controllers {
   display: flex;
   justify-content: space-between;
@@ -25,8 +36,8 @@
   font-size: 16px;
   padding: 0px 6px;
   color: white;
-  background-color: #2d6a4f;
-  border: 1px solid green;
+  background-color: var(--primary-color);
+  border: 1px solid var(--border-color);
   width: 8rem;
   height: 3rem;
   border-radius: 5px;
@@ -37,28 +48,32 @@
   background-color: white;
   padding: 4px 2px;
 }
+
 .sort--group {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
+
 .sort--buttons-group {
   display: flex;
   gap: 2rem;
 }
+
 .sort--title {
   font-size: 18px;
   font-weight: 600;
 }
+
 .sort--buttons-group > button {
   font-size: 16px;
   cursor: pointer;
   padding: 10px 15px;
   border-radius: 5px;
   color: white;
-  background-color: #2d6a4f;
-  border: 1px solid green;
+  background-color: var(--primary-color);
+  border: 1px solid var(--border-color);
 }
 
 .card--container {
@@ -78,8 +93,9 @@
   text-transform: uppercase;
   gap: 2rem;
 }
+
 .card--items {
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px var(--box-shadow-color);
   border: 1px solid #808080;
   border-radius: 10px;
   display: flex;
@@ -91,6 +107,7 @@
   transition: transform 300ms ease-in-out;
   position: relative;
 }
+
 .card--items:hover {
   transform: scale(1.1);
 }
@@ -110,21 +127,23 @@
   gap: 15px;
   width: auto;
   border-radius: 10px;
-  border: 1px solid grey;
-  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  border: 1px solid var(--modal-background-color);
+  box-shadow: 3px 4px 5px 0px var(--box-shadow-color);
   padding: 15px 20px;
   top: -90px;
 }
+
 .modal--buttons {
   padding: 8px;
   display: flex;
   gap: 2.4rem;
 }
+
 .modal--buttons > button {
   padding: 3.5px 14px;
   border-radius: 10px;
   border: none;
   color: white;
   cursor: pointer;
-  background-color: #2d6a4f;
+  background-color: var(--primary-color);
 }

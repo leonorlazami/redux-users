@@ -7,7 +7,6 @@ import Card from "./components/UI/Card";
 import SortButton from "./components/SortButton";
 function App() {
   const dispatch = useDispatch();
-  const selectedUser = useSelector((state) => state.users.selectedUser);
 
   useEffect(() => {
     dispatch(fetchUsers());
